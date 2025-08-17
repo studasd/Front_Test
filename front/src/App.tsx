@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./index.css";
+import { Button } from "@mui/material";
 
 type Props = {
   value: string;
@@ -9,7 +10,7 @@ type Props = {
 function Square({ value, onSquareClick }: Props) {
   console.log("render");
   return (
-    <button className="square" onClick={onSquareClick}>
+    <button className="square " onClick={onSquareClick}>
       {value}
     </button>
   );
@@ -59,8 +60,8 @@ export default function Board() {
 
 export function App() {
   return (
-    <>
+    <div className="">
       <Board />
-    </>
+    </div>
   );
 }
