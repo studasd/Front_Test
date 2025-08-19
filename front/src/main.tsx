@@ -1,11 +1,12 @@
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { App } from './App'
-import { ThemeProvider } from '@mui/material'
-import { darkTheme } from './theme'
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import { ThemeProvider } from "@mui/material";
+import { darkTheme } from "./theme";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./app/router";
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <ThemeProvider theme={darkTheme}>
-    <App />
+    <RouterProvider router={router} />
   </ThemeProvider>
-)
+);
